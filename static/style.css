@@ -1,0 +1,285 @@
+
+/* =========================
+   PERSONAL INFORMATION SERVER
+   Dark black and brown theme
+   ========================= */
+
+:root {
+    --background: #11100f;
+    --surface: #1b1714;
+    --brown: #302018;
+    --copper: #A8B5C4;
+    --cream: #eee7de;
+    --muted: #b6aaa0;
+    --border: #403027;
+}
+
+/* General page styling */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--cream);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Main page container */
+
+.container {
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+    padding: 40px 0;
+    min-height: calc(100vh - 140px);
+}
+
+/* Header and navigation */
+
+.site-header {
+    background: #0c0b0a;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    width: min(100% - 40px, 1000px);
+    margin: 0 auto;
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand {
+    color: var(--cream);
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand span {
+    color: var(--copper);
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--copper);
+}
+
+/* Headings and text */
+
+h1, h2, h3 {
+    color: var(--cream);
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin-top: 0;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 32px;
+}
+
+p {
+    color: var(--muted);
+}
+
+/* Small heading above a page title */
+
+.eyebrow {
+    color: var(--copper);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Highlighted words */
+
+.accent {
+    color: var(--copper);
+}
+
+/* Content panels */
+
+.panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+/* Two-column layout for homepage links */
+
+.link-columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.link-columns h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+/* Lists */
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    color: var(--muted);
+    margin-bottom: 8px;
+}
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin: 12px 0;
+}
+
+.link-list a,
+a.text-link {
+    color: var(--copper);
+    text-decoration: none;
+}
+
+.link-list a:hover,
+a.text-link:hover {
+    color: var(--cream);
+    text-decoration: underline;
+}
+
+/* Project cards */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    transition: border-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: var(--copper);
+    transform: translateY(-3px);
+}
+
+.project-card h2 {
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+.project-card p {
+    font-size: 14px;
+}
+
+.project-card a {
+    color: var(--copper);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+/* Contact panel */
+
+.contact-panel {
+    max-width: 620px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px;
+    margin-top: 28px;
+}
+
+/* Buttons, if needed */
+
+.button {
+    display: inline-block;
+    background: var(--brown);
+    color: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 10px 18px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.button:hover {
+    background: #493022;
+}
+
+/* Footer */
+
+.site-footer {
+    border-top: 1px solid var(--border);
+    background: #0c0b0a;
+    color: var(--muted);
+    text-align: center;
+    padding: 20px;
+    font-size: 13px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 16px 0;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        gap: 14px;
+    }
+
+    .container {
+        padding: 28px 0;
+    }
+
+    .link-columns,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .panel,
+    .contact-panel {
+        padding: 18px;
+    }
+}

@@ -5,24 +5,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My First Server</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
-    <h1>HTML & JSON Server</h1>
 
-    <p>A live demonstration of a Flask website and JSON API</p>
+    <header class="site-header">
+    <nav class="navbar">
+        <a href="/" class="brand">
+            <span class="eyebrow">A flask server</span> 
+        </a>
 
-    <h2>Available Web Pages</h2>
-    <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+    </header>
 
-    <h2>Try these APIs</h2>
-    <ul>
-        <li><a href="/api/about">About API</a></li>
-        <li><a href="/api/projects">Projects API</a></li>
-        <li><a href="/api/contact">Contact API</a></li>
-    </ul>
+
+    
+<main class="container">
+    
+
+    <h1>
+        <span class="accent">My First</span> Server
+    </h1>
+
+    <p>
+        A live demonstration of a Flask website and JSON API
+    </p>
+
+    <div class="link-columns">
+        <section class="panel">
+            <h2>Explore these pages </h2>
+
+            <ul class="link-list">
+                <li><a href="/about">→ About me</a></li>
+                <li><a href="/projects">→ My projects</a></li>
+                <li><a href="/contact">→ Contact</a></li>
+            </ul>
+        </section>
+
+        <section class="panel">
+            <h2>Try these APIs </h2>
+
+            <ul class="link-list">
+                <li><a href="/api/about">→ /api/about</a></li>
+                <li><a href="/api/projects">→ /api/projects</a></li>
+                <li><a href="/api/contact">→ /api/contact</a></li>
+            </ul>
+        </section>
+    </div>
+</main>
+
 </body>
+
+<footer class="site-footer">
+    HTML & JSON Server &nbsp; 
+</footer>
+
 </html>

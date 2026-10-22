@@ -4,26 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <title>About</title>
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>About Me</h1>
+
+    <header class="site-header">
+    <nav class="navbar">
+        <a href="/" class="brand">
+            <span class="eyebrow">A flask server</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </nav>
+    </header>
+
+
     
-    <p>I’m Eghogho, a recent computer science graduate with a, still, growing curiosity about technology and software.</p>
+<main class="container">
+    <p class="eyebrow">About me</p>
 
-    <p>I’ve found myself drawn to exploring different technologies, understanding how they work, and building things with them. 
-        I don’t necessarily want to stop at one thing just yet. I want to keep learning, experimenting, and discovering what’s possible.</p>
-   
-    <p>Of course, I know curiosity alone isn’t enough. I’m still building my experience beyond self learning, 
-        and I’m working towards gaining more real world experience along the way.</p>   
 
-    <p>But if you ask me what career path I see myself pursuing, I’d say Solutions Engineering. 
+    <div class="panel">
+
+        <p>
+            I’m a recent computer science graduate with a still growing curiosity about technology and software.</p>
+
+       <p> I’ve found myself drawn to exploring different technologies, understanding how they work, and building things with them. 
+        I don’t necessarily want to stop at one thing just yet. I want to keep learning, experimenting, and discovering what’s possible. </p>
+
+        <p> Of course, I know curiosity alone isn’t enough. I’m still building my experience beyond self learning, 
+        and I’m working towards gaining more real world experience along the way. </p>
+
+        <p> But if you ask me what career path I see myself pursuing, I’d say Solutions Engineering. 
         It's the perfect fit for satisfying my curiosity. In this path, I can bring together exploring technology, building solutions, understanding problems, 
-        and explaining how different technologies and software can help solve them. </p>
+        and explaining how different technologies and software can help solve them.  </p>
 
-    <p>So, this is me figuring things out, learning as I go, and building my way into tech, one project and one discovery at a time. </p>
+       <p> So, this is me figuring things out, learning as I go, and building my way into tech, one project and one discovery at a time. </p>
+    
+        <p>This my little project demonstrates how a Flask server handles requests, returns HTML pages, and returns JSON data
+            through an API. I built this project so I can get an actionable idea of a client-server architecture</p>
 
-    <p>This my little project demonstrates how a Flask server handles requests. This is so I can get an actionable idea of a client-server architecture</p>
+       <h3>By Eghogho</h3>
+    </div>
 
-    <a href="/">Home</a>
+    <p><a class="text-link" href="/">← Back home</a></p>
+</main>
+
 </body>
+
+<footer class="site-footer">
+    HTML & JSON Server &nbsp;
+</footer>
+
 </html>

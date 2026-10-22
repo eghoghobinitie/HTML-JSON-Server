@@ -1,7 +1,6 @@
 # HTML & JSON Server
 
-A Flask project demonstrating HTTP,
-routing, HTML responses, JSON APIs, and client-server
+A Flask project demonstrating HTTP routing, HTML responses, JSON APIs, and client-server
 architecture.
 
 ## Features
